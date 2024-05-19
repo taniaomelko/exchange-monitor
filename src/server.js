@@ -24,7 +24,6 @@ connectDB();
 
 const initializeServer = async () => {
   try {
-    // Define migrateMongo function
     const migrateMongo = () => {
       return new Promise((resolve, reject) => {
         const child = exec('npx migrate-mongo up', (error, stdout, stderr) => {
@@ -49,8 +48,6 @@ const initializeServer = async () => {
       await migrateMongo();
     }
 
-    // Start your server
-    // Your server startup logic goes here
     console.log('Server started successfully');
   } catch (error) {
     console.error('Error starting server:', error);
@@ -76,7 +73,7 @@ const checkPendingMigrations = () => {
   });
 };
 
-// Start the server
+// Initialize server
 initializeServer();
 
 // Start server

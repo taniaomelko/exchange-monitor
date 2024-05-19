@@ -31,8 +31,8 @@ Exchange Monitor is a web application for monitoring the USD to UAH exchange rat
 ## Configuration
 
 1. Use a `.env.example` file to create `.env` in the root directory of the project. Replace the placeholders for email and password with your actual values:
-    _EMAIL: Replace your-email@gmail.com with your actual email address.
-    _EMAIL_PASSWORD: Replace your-email-password with your actual email password.
+    EMAIL: Replace your-email@gmail.com with your actual email address.
+    EMAIL_PASSWORD: Replace your-email-password with your actual email password.
 
 ## Usage
 

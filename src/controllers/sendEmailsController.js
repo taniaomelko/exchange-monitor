@@ -6,8 +6,8 @@ const { fetchExchangeRate } = require('../services/exchangeRateService');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env._EMAIL,
-    pass: process.env._EMAIL_PASSWORD,
+    user: process.env.EMAIL,
+    pass: process.env.EMAIL_PASSWORD,
   },
 });
 

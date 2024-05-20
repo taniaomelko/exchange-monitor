@@ -32,10 +32,14 @@ const sendEmails = async (req, res) => {
 
     await Promise.all(emailPromises);
 
-    res.status(200).json({ message: 'Emails sent successfully.' });
+    if (res) {
+      res.status(200).json({ message: 'Emails sent successfully.' });
+    }
   } catch (error) {
     console.error('Error sending emails:', error);
-    res.status(500).json({ error: 'Failed to send emails.' });
+    if (res) {
+      res.status(500).json({ error: 'Failed to send emails.' });
+    }
   }
 };
 
